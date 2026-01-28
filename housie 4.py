@@ -1,0 +1,18 @@
+import random
+
+def tambola_ticket():
+    ticket = [
+        sorted(random.sample(range(1, 31), 5)),
+        sorted(random.sample(range(31, 61), 5)),
+        sorted(random.sample(range(61, 91), 5))
+    ]
+    return ticket
+tkt = tambola_ticket()
+
+print("-" * 25)
+for ss in tkt:
+    print("|", end=" ")
+    for num in ss:
+        print(f"{num:2}", end=" | ")
+    print()
+    print("-" * 25)
